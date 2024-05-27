@@ -3,9 +3,10 @@ const router = express.Router();
 const controller = require('../controllers/controller');
 
 router.get('/', controller.getAll);
-router.get('/:id', controller.getRestauById);
+router.get('/id/:id', controller.getRestauById);
+router.get('/code/:code', controller.getRestauByCode);
 router.post('/', controller.createRestau);
-router.put('/:id', controller.updateRestau);
-router.delete('/:id', controller.deleteRestau);
+router.put('/:code', controller.updateRestau);
+router.delete('/:code', controller.deleteRestau);
 
 module.exports = router;

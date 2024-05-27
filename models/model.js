@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const ScoringSchema = new Schema({
+    _id: false,
     comment: String,
     score: Number
 });
